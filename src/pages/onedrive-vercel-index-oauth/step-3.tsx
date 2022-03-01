@@ -55,7 +55,7 @@ export default function OAuthStep3({ accessToken, expiryTime, refreshToken, erro
       )
       return
     }
-    if (data.userPrincipalName !== siteConfig.userPrincipalName) {
+    if (data.userPrincipalName !== siteConfig.userPrincipalName && data.webUrl !== siteConfig.webUrl) {
       setButtonError(true)
       setButtonContent(
         <div>
